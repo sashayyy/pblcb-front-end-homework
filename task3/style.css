@@ -144,6 +144,10 @@ textarea {
     resize: none;
 }
 
+#about-yourself {
+    font-size: 1rem;
+}
+
 #approve-personal-data {
     font-size: 0.8rem;
 }
