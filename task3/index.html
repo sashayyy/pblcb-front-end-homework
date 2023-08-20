@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формочка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h2>Форма для заполнения</h2>
+    <form action="./succeed.html">
+        <label for="name">Ваше имя*:</label>
+        <input type="text" id="name" name="name" class="required"
+            placeholder="Введите имя (только латиница и кириллица)" pattern="[a-zA-Zа-яА-ЯёЁ]{2,20}" required>
+        <label for="age">Ваш возраст*:</label>
+        <input type="number" id="age" name="age" class="required" placeholder="Введите возраст (от 1 до 150)" min="1"
+            max="150" required>
+
+        <label for="sex">Ваш пол*:</label>
+        <div class="sex">
+            <input type="radio" class="checkbox" id="male" name="sex">
+            <label for="male">Мужской</label>
+            <input type="radio" class="checkbox" id="female" name="sex">
+            <label for="female">Женский</label>
+        </div>
+
+
+        <label for="cv">Ваше резюме (pdf)*:</label>
+        <input type="file" id="cv" name="cv" accept=".pdf" required>
+
+        <label for="about-yourself">Немножко о себе:</label>
+        <textarea id="about-yourself" name="about-yourself" rows="5" cols="30"></textarea>
+
+        <div></div>
+        <div>
+            <label for="approve-personal-data" data-tooltip="Закон Республики Беларусь № 99-З 
+                (Закон Республики Беларусь от 7 мая 2021 г. №99-З 
+                «О защите персональных данных.»)">Согласен(-а) на обработку персональных данных*:</label>
+            <input type="checkbox" id="approve" name="approve-personal-data" required>
+        </div>
+
+        <input type="reset" id="reset" name="reset" value="Очистить">
+        <button type="submit" id="submit">Отправить</button>
+
+    </form>
+
+</body>
+
+</html>
